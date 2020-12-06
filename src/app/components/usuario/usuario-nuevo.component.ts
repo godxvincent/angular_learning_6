@@ -15,7 +15,7 @@ export class UsuarioNuevoComponent implements OnInit {
 
   constructor( private activatedRoute: ActivatedRoute) {
 
-    // probando a cambiar el git commit
+    // probando a cambiar el git commit 2
     // Lee un parámetro directamente de la petición
     console.log('Parametro recuperado con snapshot ' + this.activatedRoute.parent.snapshot.paramMap.get('id'));
     // Lee todos los parametros de la petición
