@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <div class="container main-container">
     <h1>
         Demos
@@ -5,15 +7,8 @@
           Angular
         </small>
     </h1>
-
     <hr>
-    <!-- <app-ng-style></app-ng-style> -->
-    <!-- <app-css></app-css> -->
-    <!-- <app-clases></app-clases> -->
 
-    <!-- Con las llaves cuadradas angular le indica a la directiva que va a recibir parametros desde el html
-    asi mismo esto me hace pensar que angular tiene directivas personalizadas como [src] -->
-    <p [appResaltado]="'orange'">
-        Hola mundo desde app.component
-    </p>
+    <router-outlet></router-outlet>
+
 </div>
