@@ -1,31 +1,15 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
-import { UsuarioNuevoComponent } from './components/usuario/usuario-nuevo.component';
-import { UsuarioDetalleComponent } from './components/usuario/usuario-detalle.component';
-import { UsuarioEditarComponent } from './components/usuario/usuario-editar.component';
+import { USERROUTES } from './components/usuario/usuario.routes';
 
 
 
 const ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'usuario',
+    { path: 'usuario/:id', // PArametro de ejemplo
       component: UsuarioComponent,
-      children: [
-        {
-            path: 'nuevo',
-            component: UsuarioNuevoComponent
-        },
-        {
-            path: 'detalle',
-            component: UsuarioDetalleComponent
-        },
-        {
-            path: 'editar',
-            component: UsuarioEditarComponent
-        },
-        { path: '**', pathMatch: 'full', redirectTo: 'nuevo' }
-      ]
+      children: USERROUTES
     },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
